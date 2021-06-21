@@ -1,63 +1,11 @@
 .page {
   min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
-  margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #8ff7a0;
-  color: black;
-}
-.header {
+  margin: 100px auto;
   display: flex;
-  min-height: 60px;
-  align-items: flex-end;
-  margin-bottom: 100px;
-}
-.header__title {
-  margin: 0 auto;
-}
-.content {
-  width: 100%;
-  margin: 0 auto;
-  background-color: rgb(252, 252, 252);
-}
-.animals {
-width: 100%;
-display: flex;
-flex-wrap: wrap;
-padding: 10px 10px 10px 10px;
-box-sizing: border-box;
-}
-.animal {
-width: 350px;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 10px 10px 10px 10px;
-margin: 0 10px 10px 0;
-border: 1px solid red;
-}
-.animal__image {
-width: 300px;
-height: 250px;
-margin-bottom: 10px;
-}
-.animal__title {
-  margin: 0 auto 10px;
-}
-.animal__about{
-  padding: 0 10px 0 10px;
-}
-.buttons{
-  width: 300px;
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-
-.animal__link{
-  margin-left: 100px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #ffffff;
+  color: black;
 }

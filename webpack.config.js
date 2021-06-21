@@ -1,17 +1,17 @@
-const path = require("path"); // подключаем path к конфигу вебпак
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const path = require('path'); // подключаем path к конфигу вебпак
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
-  entry: { main: "./src/index.js" },
+  entry: { main: './src/index.js' },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
-    publicPath: "",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
+    publicPath: '',
   },
-  mode: "development",
+  mode: 'development',
   devServer: {
-    contentBase: path.resolve(__dirname, "./dist"),
+    contentBase: path.resolve(__dirname, './dist'),
     compress: true,
     port: 8080,
     open: true,
@@ -24,35 +24,39 @@ module.exports = {
         // регулярное выражение, которое ищет все js файлы
         test: /\.js$/,
         // при обработке этих файлов нужно использовать babel-loader
-        use: "babel-loader",
+        use: 'babel-loader',
         // исключает папку node_modules, файлы в ней обрабатывать не нужно
-        exclude: "/node_modules/",
+        exclude: '/node_modules/',
       },
       {
         test: /\.css$/,
-        loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+        loader:
+          'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
       },
       {
         // регулярное выражение, которое ищет все файлы с такими расширениями
         test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
       {
         // применять это правило только к CSS-файлам
         test: /\.css$/,
         // при обработке этих файлов нужно использовать
         // MiniCssExtractPlugin.loader и css-loader
-        use: [MiniCssExtractPlugin.loader, {
-          loader: 'css-loader'
-        }]
-      }
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: './src/index.html',
     }),
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
   ],
 };
