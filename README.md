@@ -50,4 +50,4 @@
 
 
 Баги: 
-1. В случае возникновения ошибки SELF_SIGNED_CERT_IN_CHAIN, нужно в консоли прописать  ```npm config set registry="http://registry.npmjs.org/"```. Несмотря на то, что у меня её не было, у знакомого возникла. 
+1. В случае возникновения ошибки SELF_SIGNED_CERT_IN_CHAIN, нужно в консоли прописать  ```npm config set registry="http://registry.npmjs.org/"```. Несмотря на то, что у меня её не было на двух ПК (Windows), у знакомого возникла. 
