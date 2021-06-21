@@ -36,28 +36,24 @@ module.exports = {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
-              modules: true
-            }
-          }
+              modules: true,
+            },
+          },
         ],
-        include: /\.module\.css$/
+        include: /\.module\.css$/,
       },
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ],
-        exclude: /\.module\.css$/
+        use: ['style-loader', 'css-loader'],
+        exclude: /\.module\.css$/,
       },
       {
         // регулярное выражение, которое ищет все файлы с такими расширениями
         test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
         type: 'asset/resource',
       },
-    
-        // применять это правило только к CSS-файлам
 
+      // применять это правило только к CSS-файлам
     ],
   },
   plugins: [
