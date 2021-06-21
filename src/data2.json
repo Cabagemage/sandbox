@@ -1,0 +1,37 @@
+{
+  "headers": {
+    "name": "The Best",
+    "id": 2
+  },
+  "inputs": [
+    {
+      "label": "Ansfds",
+      "type": "text",
+      "id": "first_name",
+      "placeholder": "First Name"
+    },
+    {
+      "label": "sdfsdf",
+      "type": "text",
+      "id": "last_name",
+      "placeholder": "Last Name"
+    },
+    {
+      "label": "dfdsfsdf",
+      "type": "number",
+      "id": "age",
+      "placeholder": "Age"
+    },
+    {
+      "label": "fdsfsd",
+      "type": "tel",
+      "id": "phone",
+      "placeholder": "Phone number"
+    }
+  ],
+  "submit": {
+    "url": "www.sdfsdfsdf.com",
+    "method": "POST",
+    "text": "TRSTS"
+  }
+}

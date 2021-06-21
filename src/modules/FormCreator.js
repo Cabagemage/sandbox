@@ -27,7 +27,7 @@ class FormCreator extends HTMLElement {
     const inputs = this.inputs.map((item) => {
       const input = document.createElement('INPUT');
       const label = document.createElement('LABEL');
-      
+
       input.type = item.type;
       label.textContent = item.label;
       input.id = item.id;
