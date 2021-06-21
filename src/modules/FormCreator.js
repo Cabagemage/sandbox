@@ -3,16 +3,18 @@ import styles from './form.module.css';
 class FormCreator extends HTMLElement {
   // Принимает два аргумента: дата - входные данные (JSON-формат) и второй аргумент - это селектор(строка),
   // где форма должна быть размещена.
-  constructor(data, placeForTheForm) {
+  constructor(data, placeForTheForm, customFormTag, changeThemeSelector) {
     super();
     this.inputs = data.inputs;
     this.submit = data.submit;
     this.headers = data.headers;
     this.placeForTheForm = placeForTheForm;
+    this.customFormTag = customFormTag;
+    this.changeThemeSelector = changeThemeSelector;
   }
   // Инициализация формы.
   _formInit() {
-    const customForm = document.getElementsByTagName('custom-form')[0];
+    const customForm = document.getElementsByTagName(this.customFormTag)[0];
     const form = document.createElement('FORM');
     form.className = styles.form;
     form.name = this.headers.name;
@@ -88,7 +90,7 @@ class FormCreator extends HTMLElement {
   }
 
   _eventListeners() {
-    const changeTheme = document.getElementById('change_theme');
+    const changeTheme = document.getElementById(this.changeThemeSelector);
     const submitButton = document.getElementById('submit');
 
     changeTheme.addEventListener('click', () => {
