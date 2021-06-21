@@ -1,8 +1,8 @@
 import styles from './form.module.css';
 
 class FormCreator extends HTMLElement {
-  // Принимает два аргумента: дата - входные данные (JSON-формат) и второй аргумент - это селектор(строка),
-  // где форма должна быть размещена.
+  // Принимает четыре аргумента: дата - входные данные (JSON-формат), второй аргумент - это селектор(строка),
+  // где форма должна быть размещена, а также название тега кастомной формы и селектор смены темы. 
   constructor(data, placeForTheForm, customFormTag, changeThemeSelector) {
     super();
     this.inputs = data.inputs;
