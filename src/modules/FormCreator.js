@@ -14,7 +14,7 @@ class FormCreator extends HTMLElement {
   _formInit() {
     const customForm = document.getElementsByTagName('custom-form')[0];
     const form = document.createElement('FORM');
-    form.className = styles.form;
+    form.className = styles.form + ' ' ;
     form.name = this.headers.name;
     form.id = this.headers.id;
     form.action = this.submit.url;
@@ -46,14 +46,14 @@ class FormCreator extends HTMLElement {
     const darkThemeButton = document.createElement('BUTTON');
     const title = document.createElement('SPAN');
     title.textContent = this.headers.name;
-    title.className = styles.title;
+    title.className = styles.title + ' ';
     darkThemeButton.id = 'change_theme';
     darkThemeButton.type = 'button';
     darkThemeButton.className = styles.button_toggle_theme;
     submitButton.id = 'submit';
     submitButton.type = 'submit';
     submitButton.textContent = this.submit.text;
-    submitButton.className = styles.submit;
+    submitButton.className = styles.submitButton + ' ';
     this._inputsInit().forEach((item) => {
       const wrapper = document.createElement('DIV');
       wrapper.className = styles.wrapper;
