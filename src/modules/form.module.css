@@ -1,0 +1,76 @@
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  padding: 30px;
+}
+.form_dark_theme {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+.title {
+  text-align: left;
+  font-size: 26px;
+  padding-left: 10px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid grey;
+  margin-bottom: 10px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.wrapper:last-of-type {
+  margin-bottom: 0;
+}
+.input {
+  width: 100%;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 0 15px 0 15px;
+  height: 35px;
+  border: 1px solid rgb(114, 189, 240);
+  outline: none;
+}
+
+.input:focus {
+  border: rgb(20, 171, 218) 2px solid;
+}
+
+.label {
+  padding-left: 15px;
+  margin-bottom: 5px;
+}
+.button_toggle_theme {
+  width: 30px;
+  height: 30px;
+  border: transparent;
+  cursor: pointer;
+  background-color: transparent;
+  position: absolute;
+  background-image: url('../assets/moon.svg');
+  background-repeat: no-repeat;
+  right: 30px;
+  top: 33px;
+}
+.submit {
+  margin-top: 25px;
+  border-radius: 5px;
+  width: 50%;
+  border: transparent;
+  cursor: pointer;
+  align-self: center;
+  background-color: rgb(13, 216, 138);
+  height: 30px;
+}
+.submit:hover {
+  background-color: rgb(5, 255, 159);
+  opacity: 0.7;
+}

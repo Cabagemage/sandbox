@@ -1,0 +1,37 @@
+{
+  "headers": {
+    "name": "The Best Form Ever",
+    "id": 1
+  },
+  "inputs": [
+    {
+      "label": "Имя",
+      "type": "text",
+      "id": "first_name",
+      "placeholder": "First Name"
+    },
+    {
+      "label": "Фамилия",
+      "type": "text",
+      "id": "last_name",
+      "placeholder": "Last Name"
+    },
+    {
+      "label": "Возраст",
+      "type": "number",
+      "id": "age",
+      "placeholder": "Age"
+    },
+    {
+      "label": "Телефон",
+      "type": "tel",
+      "id": "phone",
+      "placeholder": "Phone number"
+    }
+  ],
+  "submit": {
+    "url": "www.example.com",
+    "method": "POST",
+    "text": "Отправить"
+  }
+}

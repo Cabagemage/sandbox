@@ -29,6 +29,10 @@ module.exports = {
         exclude: "/node_modules/",
       },
       {
+        test: /\.css$/,
+        loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+      },
+      {
         // регулярное выражение, которое ищет все файлы с такими расширениями
         test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
         type: "asset/resource",

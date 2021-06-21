@@ -1,3 +1,8 @@
-import "materialize-css/dist/css/materialize.min.css";
-import "materialize-css/dist/js/materialize.min";
-import "./index.css";
+import './index.css';
+import FormCreator from './modules/FormCreator';
+import data from './data.json';
+
+const place = '.content';
+const form = new FormCreator(data, place);
+
+form.connectedCallback();
