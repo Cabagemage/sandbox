@@ -73,7 +73,6 @@ class FormCreator extends HTMLElement {
     form.prepend(title);
   }
 
-  // рендер
   connectedCallback() {
     this._createMarkUp();
     this._eventListeners();
